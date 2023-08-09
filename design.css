@@ -1,0 +1,47 @@
+.direita{
+    background-color: aquamarine;
+    height: 1000px;
+    width: 20%;
+    display: inline-block;
+    padding: 12px;
+}
+
+.img{
+    width: 300px;
+    height: 270px;
+}
+
+.centro{
+    background-color: rgb(209, 239, 239);
+    width: 60%;
+    height: 1024px;
+    text-align:left;
+    display: inline-block;
+    padding-left: 3%;
+}
+
+.main{
+    display: flex;
+}
+
+.esquerda{
+    background-color: rgb(209, 239, 239);
+    width: 20%;
+    height: 1024px;
+    display: inline-block;
+}
+
+.paragrafo{
+    align-self: center;
+}
+
+.format{
+    width: 30%;
+    margin-left: 40%;
+    background-color: aquamarine;
+    
+}
+
+.margin{
+    margin-top: 14%;
+}
