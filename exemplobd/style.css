@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+}
+
+.prc{
+    background-color: rgb(245, 159, 128);
+    height: 350px;
+    width: 400px;
+    text-align: center;
+}
+
+.form{
+    text-align: left;
+}
+
+.label{
+    padding-left: 152px;
+    margin-right: 20px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.button{
+    margin-top: 40px;
+    margin-left: 165px;
+}
+
+.input{
+    margin-top: 20px;
+    margin-left: 110px;
+}
+
+.img{
+    height: 900px;
+    width: 900px;
+}
