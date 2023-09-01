@@ -1,23 +1,17 @@
 <?php
 include('conexao.php');
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
 
-$nome = $_POST['nome'];
-$valor = $_POST['valor'];
-$quantidade = $_POST['quantidade'];
+if(isset($_POST['nome'], $_POST['valor'], $_POST['quantidade']) && ($_POST['nome']!='') && ($_POST['valor']!='') && ($_POST['quantidade']!='')){
+    $nome = $_POST['nome'];
+    $valor = $_POST['valor'];
+    $quantidade = $_POST['quantidade'];
+}else{
+    echo 'variaveis nao definidas';
+    die();
+}
 
-echo '<br>';
-echo $nome;
-echo '<br>';
-echo $valor;
-echo '<br>';
-echo $quantidade;
-
-echo '<br>';
-
-$query = $dbh->prepare('insert into produtos(nome, valor, quantidade)values(:nome, :valor, :quantidade);');
+try{
+    $query = $dbh->prepare('insert into produtos(nome, valor, quantidade)values(:nome, :valor, :quantidade);');
 
 $query->execute(array(
     ':nome' => $nome,
@@ -25,5 +19,14 @@ $query->execute(array(
     ':quantidade' => $quantidade
 ));
 
-print_r($dbh);
+echo 'produto cadastrado!';
+echo '<br>';
+echo '<button>';
+echo '<a href="tabela_produtos.php">Acessar Tabela</a>';
+echo '</button>';
+
+}catch(PDOException $e){
+
+    echo 'Nenhum produto foi cadastrado!';
+}
 ?>
