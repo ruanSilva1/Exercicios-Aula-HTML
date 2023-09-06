@@ -1,0 +1,11 @@
+pai{
+    display: inline-flex;
+}
+
+filho{
+    background-color: aquamarine;
+}
+
+.form{
+    font-size: 30px;
+}
