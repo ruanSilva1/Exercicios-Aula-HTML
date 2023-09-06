@@ -5,6 +5,11 @@ $query->execute();
 
 $produtos = $query->fetchAll();
 
+
+$query = $dbh->prepare('select * from categoria');
+$query->execute();
+
+$categoria = $query->fetchAll();
 /*echo '<pre>';
 print_r($produtos);
 echo '<pre>';*/
@@ -49,6 +54,7 @@ echo '<pre>';*/
                     <th>Nome</th>
                     <th>Valor</th>
                     <th>Quantidade</th>
+                    <th>Categoria</th>
                     <th>Editar</th>
                     <th>Deletar</th>
                 </tr>
@@ -61,6 +67,7 @@ echo '<pre>';*/
                     echo '<td>'.$produto['nome'].'</td>';
                     echo '<td>'.$produto['valor'].'</td>';
                     echo '<td>'.$produto['quantidade'].'</td>';
+                    echo '<td>'.$produto['cat'].'</td>';
                     echo '<td><a href="editar.php?idProd='.$produto['id'].'">Editar</a></td>';
                     echo '<td><a href="delete.php?idProd='.$produto['id'].'">Deletar</a></td>';
                     echo '</tr>';
@@ -68,6 +75,6 @@ echo '<pre>';*/
                 ?>
             </tbody>
         </table>
-        <button><a href="cadastro.html">Voltar</a></button>
+        <button><a href="cad.php">Voltar</a></button>
     </body>
 </html>
