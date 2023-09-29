@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    background-color: rgb(186, 231, 231);
+}
+
+h1{
+    margin-left: 45%;
+    margin-top: 7%;
+    font-family: 'Trebuchet MS';
+}
+form{
+    margin-left: 46%;
+}
+
+input{
+    border-radius: 5px;
+}
+
+.log{
+    margin-top: 2.5%;
+    margin-left: 7%;
+}
